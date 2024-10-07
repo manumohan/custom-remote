@@ -1,0 +1,17 @@
+{
+    "name": "Remote Control",
+    "short_name": "RemoteControl",
+    "description": "A remote control app",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#f0f0f0",
+    "theme_color": "#007bff",
+    "icons": [
+      {
+        "src": "favicon.ico",
+        "sizes": "32x32",
+        "type": "image/x-icon"
+      }
+    ]
+  }
+  

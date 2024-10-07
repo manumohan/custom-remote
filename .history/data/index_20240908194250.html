@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LG AKB74475401 Remote Control</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+
+    .remote-control {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #333;
+      padding: 20px;
+      border-radius: 20px;
+      width: 280px;
+      margin: 50px auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-lg {
+      padding: 5px 5px 5px 0px;
+      width: 60px;
+      margin: 2px 5px 2px 3px;
+    }
+
+    .fnt-15 {
+      font-size: 15px;
+    }
+
+    .btn-sp4 {
+      padding: 0px;
+      width: 60px;
+      margin: 2px 2px 0px 2px;
+      font-size: 11px;
+      height: 30px;
+    }
+
+    .btn-sp3 {
+      padding: 0px 20px;
+      width: 69px;
+      margin: 10px 2px 0px 2px;
+      font-size: 15px;
+      height: 30px;
+    }
+
+    .btn-sp {
+      padding: 0px;
+      width: 60px;
+      margin: 5px;
+      height: 30px;
+    }
+
+    .btn-vol {
+      padding: 8px;
+      width: 70px;
+      margin: 3px;
+    }
+
+    .btn-nav {
+      height: 30px;
+      margin: 10px 0 0 0;
+      font-size: 15px;
+    }
+
+    .btn-icon {
+      font-size: 24px;
+    }
+
+    .btn-circle {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-section {
+      display: grid;
+      grid-template-columns: 50px 50px 50px;
+      grid-template-rows: 50px 50px 50px;
+      justify-content: center;
+      gap: 15px;
+      margin-left: 25px;
+    }
+
+    .ml20 {
+      margin-left: -20px;
+    }
+
+    .mr25 {
+      margin-right: -25px;
+    }
+
+    .ch-vol-sp {
+      color: white;
+      padding: 5px;
+    }
+
+    .nav-section-vol {
+      display: grid;
+      justify-content: center;
+    }
+
+    .btn-ok {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #666;
+    }
+
+    .color-buttons button {
+      width: 20%;
+      height: 25px;
+    }
+
+    .btn-volume {
+      width: 50px;
+      margin: -5px 5px -5px 5px;
+      height: 65px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Tab Navigation -->
+  <ul class="nav nav-tabs" id="remoteTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="remote1-tab" data-bs-toggle="tab" data-bs-target="#remote1" type="button" role="tab" aria-controls="remote1" aria-selected="true">Remote 1</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="remote2-tab" data-bs-toggle="tab" data-bs-target="#remote2" type="button" role="tab" aria-controls="remote2" aria-selected="false">Remote 2</button>
+    </li>
+  </ul>
+
+  <!-- Tab Content -->
+  <div class="tab-content" id="remoteTabContent">
+    <!-- Remote 1 -->
+    <div class="tab-pane fade show active" id="remote1" role="tabpanel" aria-labelledby="remote1-tab">
+      <div class="remote-control">
+        <!-- First Remote Controls -->
+        <div class="d-flex justify-content-between w-100 mb-3">
+          <button class="btn btn-danger btn-circle" data-bs-toggle="tooltip" data-bs-placement="top" onclick="sendIR('power')" title="Power">
+            <i class="bi bi-power"></i>
+          </button>
+          <button class="btn btn-secondary btn-lg" data-bs-toggle="tooltip" data-bs-placement="top" onclick="sendIR('tv')" title="TV">
+            <i class="bi bi-tv-fill"></i>
+          </button>
+        </div>
+        <!-- Other buttons for the first remote here -->
+      </div>
+    </div>
+
+    <!-- Remote 2 -->
+    <div class="tab-pane fade" id="remote2" role="tabpanel" aria-labelledby="remote2-tab">
+      <div class="remote-control">
+        <!-- Second Remote Controls -->
+        <div class="d-flex justify-content-between w-100 mb-3">
+          <button class="btn btn-danger btn-circle" data-bs-toggle="tooltip" data-bs-placement="top" onclick="sendIR('power')" title="Power">
+            <i class="bi bi-power"></i>
+          </button>
+          <button class="btn btn-secondary btn-lg" data-bs-toggle="tooltip" data-bs-placement="top" onclick="sendIR('tv')" title="TV">
+            <i class="bi bi-tv-fill"></i>
+          </button>
+        </div>
+        <!-- Other buttons for the second remote here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
